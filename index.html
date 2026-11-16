@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#09090b"><title>CINEMA HUB</title>
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="/">CINEMA<span>HUB</span></a><div id="account"></div></header>
+<main>
+<section class="hero"><div class="hero-copy"><p class="eyebrow">YOUR PRIVATE SCREENING ROOM</p><h1>Stories worth<br><em>staying in for.</em></h1><p class="muted">A personal library for your circle.</p></div><div class="hero-glow"></div></section>
+<section id="auth" class="panel">
+  <div class="tabs"><button class="tab active" data-tab="login">Sign in</button><button class="tab" data-tab="register">Create account</button></div>
+  <form id="loginForm"><h2>Welcome back</h2><label>Email<input name="email" type="email" required autocomplete="email"></label><label>Password<input name="password" type="password" required autocomplete="current-password"></label><button class="primary">Sign in</button></form>
+  <form id="registerForm" class="hidden"><h2>Join your circle</h2><label>Your name<input name="name" required minlength="2"></label><label>Email<input name="email" type="email" required></label><label>Password<input name="password" type="password" minlength="10" required></label><button class="primary">Create account</button><p class="hint">Your account needs admin approval before you can enter.</p></form>
+  <p id="authMessage" class="message"></p>
+</section>
+<section id="app" class="hidden">
+  <div class="section-head"><div><p class="eyebrow">THE LIBRARY</p><h2>Now showing</h2></div><button id="logout" class="ghost">Sign out</button></div>
+  <div id="library" class="library"></div>
+  <section class="panel request-panel"><p class="eyebrow">MAKE A REQUEST</p><h2>What's next on the list?</h2><form id="requestForm"><label>Title<input name="title" required maxlength="120" placeholder="Movie or series name"></label><label>Notes (optional)<textarea name="details" maxlength="500" placeholder="Any details..."></textarea></label><button class="primary">Send request</button></form><div id="requests"></div></section>
+  <section id="admin" class="panel hidden"><p class="eyebrow">ADMIN AREA</p><h2>Manage your circle</h2><div id="users"></div><h3>Content requests</h3><div id="adminRequests"></div></section>
+</section>
+</main>
+<div id="player" class="player hidden"><button id="closePlayer" class="close">✕</button><video id="video" controls playsinline></video><p id="playingTitle"></p></div>
+<div id="toast" role="status"></div>
+<script src="/assets/app.js"></script>
+</body></html>

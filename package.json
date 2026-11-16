@@ -1,0 +1,8 @@
+{
+  "name": "cinema-hub",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A private friends-and-family media library",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=20" }
+}
